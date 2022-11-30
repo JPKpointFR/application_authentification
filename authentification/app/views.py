@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("<h1>Bonjour A Tous Et Bienvenue</h1>")
+    return render(request, 'app/index.html')
 
 
 def register(request):
