@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h3>Bonjour {{firstname}}</h3>
+<button type="submit"><a href="/logout">Se déconnecter</a></button>
+
+{% else %}
+<button type="submit"><a href="/register">Créer un compte</a></button>
+<button type="submit"><a href="/login">Se connecter</a></button>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Création de compte</h4>
+
+{% for message in messages %}
+{{messages}}
+{% endfor %}
+
+<form action="/register" method="post">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" placeholder="Enter your username" required>
+    <br><br>
+    <label for="firstname">Firstname</label>
+    <input type="text" name="firstname" id="firstname" placeholder="Enter your firstname" required>
+    <br><br>
+    <label for="laststname">Lastname</label>
+    <input type="text" name="laststname" id="laststname" placeholder="Enter your laststname" required>
+    <br><br>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+    <br><br>
+    <label for="password">Password</label>
+    <input type="text" name="password" id="password" placeholder="Enter your password" required>
+    <br><br>
+    <label for="password1">Password</label>
+    <input type="password" name="password1" id="password1" placeholder="Confirm your password" required>
+    <br><br>
+    <button type="submit">Céer</button>
+</form>
+{% endblock %}
