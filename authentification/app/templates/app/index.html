@@ -2,6 +2,11 @@
 
 {% block content %}
 
+{% for message in messages %}
+<strong>{{message}}</strong>
+<br><br>
+{% endfor %}
+
 {% if user.is_authenticated %}
 <h3>Bonjour {{firstname}}</h3>
 <button type="submit"><a href="/logout">Se déconnecter</a></button>

@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h4>Création de compte</h4>
+<h3>Création de compte</h3>
 
 {% for message in messages %}
-{{messages}}
+<strong> {{message}} </strong>
 {% endfor %}
 
 <form action="/register" method="post">
@@ -22,7 +22,7 @@
     <input type="email" name="email" id="email" placeholder="Enter your email" required>
     <br><br>
     <label for="password">Password</label>
-    <input type="text" name="password" id="password" placeholder="Enter your password" required>
+    <input type="password" name="password" id="password" placeholder="Enter your password" required>
     <br><br>
     <label for="password1">Password</label>
     <input type="password" name="password1" id="password1" placeholder="Confirm your password" required>
